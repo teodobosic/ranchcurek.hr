@@ -223,11 +223,12 @@ body {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responzivna galerija */
     gap: 20px;
     justify-items: center;
 }
 
+/* Stil za galerijske stavke */
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -272,6 +273,8 @@ body {
     max-height: 80%;
     margin: auto;
     display: block;
+    object-fit: contain;
+    border: 5px solid white;
 }
 
 #caption {
@@ -281,14 +284,18 @@ body {
     margin-top: 15px;
 }
 
+/* Stil za dugme za zatvaranje modala */
 .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 10px;
+    right: 10px;
     color: white;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
 }
 
 /* Ikone društvenih mreža */
@@ -323,4 +330,78 @@ body {
 
 .social-icons .facebook:hover {
     color: #1d3c6e;
-} 
+}
+
+/* Responzivnost za mobilne uređaje */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav ul li {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 5rem;
+    }
+
+    .gallery-title {
+        font-size: 2.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Manji raspored za mobilne uređaje */
+    }
+
+    .modal-content {
+        max-width: 100%;
+        max-height: 80%;
+    }
+
+    .close {
+        top: 5px;
+        right: 5px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .gallery-title {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smanjeni raspored na vrlo malim ekranima */
+    }
+
+    .gallery-item {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .close {
+        font-size: 28px;
+        padding: 3px;
+    }
+
+    .modal-content {
+        max-height: 70%; /* Još manja visina slike na vrlo malim ekranima */
+    }
+}
