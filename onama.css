@@ -1,0 +1,402 @@
+/* Resetiranje osnovnih stilova */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.8;
+  background-color: #FF8C00;
+  color: #333;
+}
+
+/* Animacija za tekst "Ranch Curek" */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero sekcija s pozadinskom slikom */
+.hero {
+  background: url('images/.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 100px 150px;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Overlay efekt */
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 8rem; /* Povećana veličina naslova */
+  margin-bottom: 20px;
+  color: #ffd700; /* Zlatna boja za naslov */
+  position: relative;
+  animation: fadeInLeft 1.5s ease-out; /* Dodana animacija */
+}
+
+/* Ostali stilovi za stranicu "O nama" */
+.header {
+  background-color: #00CED1;
+  color: white;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 120px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav ul li {
+  margin-left: 60px;
+}
+
+.nav ul li a {
+  color: #696969;
+  font-size: 28px;
+  font-weight: 700;
+  transition: color 0.4s ease, text-decoration 0.4s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+/* Animacija podcrtavanja za navigacijske linkove */
+.nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #7FFF00;
+  transition: width 0.4s ease;
+}
+
+.nav ul li a:hover {
+  color: #7FFF00;
+}
+
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+.nav ul li a.active {
+  color: #7FFF00;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Prebacivanje jezika */
+.language-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.language-icon {
+  width: 50px;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.language-icon:hover {
+  opacity: 0.7;
+}
+
+/* Breadcrumbs sekcija */
+.breadcrumbs {
+  padding: 20px 40px;
+  background-color: #87ceeb;
+  margin: 0px 0;
+}
+
+.breadcrumbs p {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: left;
+}
+
+.breadcrumbs p a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbs p a:hover {
+  color: #7FFF00;
+}
+
+.breadcrumbs p span {
+  color: #333;
+  font-weight: normal;
+}
+
+/* "O nama" sekcija */
+.about {
+  background-color: #ffffff;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #ff6600;
+}
+
+.about p {
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* Podnožje */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer .footer-links {
+  margin-bottom: 20px;
+}
+
+.footer .footer-links a {
+  color: white;
+  margin-left: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-links a:hover {
+  color: #007BFF;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 20px;
+}
+
+/* Kontaktne informacije u podnožju */
+.contact-info {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Ikone društvenih mreža */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 0px;
+}
+
+.social-icons a {
+  font-size: 2.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007BFF;
+}
+
+/* Slika iza naslova O nama */
+.about-header-image {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Prilagodite visinu slike prema vašim potrebama */
+  overflow: hidden;
+  margin-bottom: 20px; /* Razmak između slike i naslova */
+}
+
+.about-header-image .about-header-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Održava proporcionalne dimenzije slike */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Postavlja sliku iza teksta */
+}
+
+/* Animacija naslova O nama */
+.about .section-title {
+  animation: fadeInLeft 1.5s ease-out;
+}
+
+/* Animacija za tekst naslova */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responzivnost za mobilne uređaje */
+@media (max-width: 768px) {
+  /* Zaglavlje */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav ul li {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .nav ul li a {
+    padding: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  .language-switcher {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .hero-title {
+    font-size: 2em;
+  }
+
+  .hero-text {
+    font-size: 1.2em;
+  }
+
+  .about {
+    padding: 20px;
+  }
+
+  .about-title {
+    font-size: 1.5em;
+  }
+
+  .about-text {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .map-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer h2, .footer p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8em;
+  }
+
+  .hero-text {
+    font-size: 1.1em;
+  }
+
+  .about-title {
+    font-size: 1.3em;
+  }
+
+  .about-text {
+    font-size: 0.9em;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+} 

@@ -1,0 +1,208 @@
+/* Globalni stilovi */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Zaglavlje */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: top 0.5s ease-in-out;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 120px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 28px;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.nav ul li a:hover, 
+.nav ul li a.active {
+    background: #f4c542;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* Ikone društvenih mreža */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}    
+.social-icons a {
+    color: #333;
+    margin: 0 110px;
+    font-size: 2.5rem;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.social-icons a:hover {
+    color: #f4c542;
+}
+
+/* Hero sekcija */
+.hero {
+    background: url("../images/hero-bg.jpg") center/cover no-repeat;
+    color: #f4c542;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-title {
+    font-size: 86px;
+    margin-bottom: 10px;
+}
+
+.hero-text {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sekcija usluga */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 50px 5%;
+}
+
+.service {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.service h2 {
+    font-size: 22px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.service p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Kontaktirajte nas */
+.contact-us {
+    text-align: center;
+    background: #f4c542;
+    color: white;
+    padding: 50px 20px;
+}
+
+.contact-us h2 {
+    font-size: 28px;
+}
+
+.contact-us p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    background: white;
+    color: #f4c542;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: #fff5d1;
+}
+
+/* Podnožje */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a {
+    color: #f4c542;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responzivnost */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+    
+}
