@@ -10,18 +10,7 @@ body {
   line-height: 1.8;
   background-color: #FF8C00;
   color: #333;
-}
-
-/* Animacija za tekst "Ranch Curek" */
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  overflow-x: hidden; /* Onemogućavamo horizontalno skrolanje */
 }
 
 /* Hero sekcija s pozadinskom slikom */
@@ -108,24 +97,6 @@ body {
   color: #7FFF00;
   font-size: 32px;
   font-weight: bold;
-}
-
-/* Prebacivanje jezika */
-.language-switcher {
-  display: flex;
-  align-items: center;
-}
-
-.language-icon {
-  width: 50px;
-  height: 30px;
-  margin-left: 10px;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.language-icon:hover {
-  opacity: 0.7;
 }
 
 /* Breadcrumbs sekcija */
@@ -288,7 +259,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
   }
 
   .logo {
@@ -397,6 +368,6 @@ body {
   }
 
   .social-icons {
-    gap: 10px;
+    gap: 30px;
   }
-} 
+}
