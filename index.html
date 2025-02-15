@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranch Curek</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="logo/logo 2.png" Href="logo/ logo 2.png">
+</head>
+<body>
+
+    <!-- Zaglavlje -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="Logo/logo 2.png" alt="logo">
+            </a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html" class="active" id="home-link">Početna</a></li>
+                <li><a href="onama.html" id="about-link">O nama</a></li>
+                <li><a href="ponuda.html" id="services-link">Ponuda</a></li>
+                <li><a href="kontakt.html" id="contact-link">Kontakt</a></li>
+                <li><a href="galerija.html" id="gallery-link">Galerija</a></li>
+            </ul>
+        </nav>
+
+        <!-- Prebacivanje jezika -->
+        <div class="language-switcher">
+            <img src="flags/croatia_round_icon_64.png" alt="Hrvatski" class="language-icon" id="croatian">
+            <img src="flags/united_kingdom_round_icon_64.png" alt="Engleski" class="language-icon" id="english">
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/explore/locations/1342552665785724/ranch-curek/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/p/Ranch-CUREK-100066415277167/?locale=hr_HR" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero sekcija -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="hero-title">Ranch Curek</h1>
+            <p id="hero-text">Stručnost i povjerenje za vaš uspjeh</p>
+            <a href="ponuda.html" class="btn">Saznaj više</a>
+        </div>
+    </section>
+
+    <!-- O nama sekcija -->
+    <section class="about">
+        <h2 id="about-title">O nama</h2>
+        <p id="about-text">Mi smo obiteljski ranč posvećen pružanju nezaboravnih iskustava s konjima i prirodom.</p>
+        <a href="onama.html" class="btn">Pročitaj više</a>
+    </section>
+
+    <!-- Usluge sekcija -->
+    <section class="services">
+        <h2 id="services-title">Naša ponuda</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <i class="fa fa-horse"></i>
+                <h3 id="service-name-1">Jahanje</h3>
+                <p id="service-description-1">Iskusite jahanje u prekrasnoj prirodi.</p>
+            </div>
+            <div class="service-item">
+                <i class="fa fa-leaf"></i>
+                <h3 id="service-name-2">Izleti u prirodu</h3>
+                <p id="service-description-2">Uživajte u prirodi i istražite skrivene ljepote.</p>
+            </div>
+            <div class="service-item">
+                <i class="fa fa-home"></i>
+                <h3 id="service-name-3">Smještaj</h3>
+                <p id="service-description-3">Opustite se u našem udobnom smještaju.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kako do nas? sekcija -->
+    <section class="location">
+        <h2 id="location-title">Kako do nas?</h2>
+        <p id="location-text">Nalazimo se u Pleškovcu, lako dostupni iz svih smjerova.</p>
+        <div class="map-container">
+            <img src="images/lokacija.png" alt="Mapa Ranch Curek">
+        </div>
+    </section>
+
+    <!-- Podnožje -->
+    <footer class="footer">
+        <div class="contact-info">
+            <h2>Ranch Curek</h2>
+            <p>Pleškovec 115d, 40000 Čakovec</p>
+            <p>Email: <a href="mailto:ranchcurek1@gmail.com">ranchcurek1@gmail.com</a></p>
+            <p>Telefon: 092 110 1767</p>
+        </div>
+        <p>&copy; 2025 Ranch Curek</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Funkcija za prebacivanje jezika
+        function promijeniJezik(jezik) {
+            const elementi = {
+                'home-link': { 'en': 'Home', 'hr': 'Početna' },
+                'about-link': { 'en': 'About Us', 'hr': 'O nama' },
+                'services-link': { 'en': 'Services', 'hr': 'Ponuda' },
+                'contact-link': { 'en': 'Contact', 'hr': 'Kontakt' },
+                'gallery-link': { 'en': 'Gallery', 'hr': 'Galerija' },
+                'hero-title': { 'en': 'Ranch Curek', 'hr': 'Ranch Curek' },
+                'hero-text': { 'en': 'Expertise and trust for your success', 'hr': 'Stručnost i povjerenje za vaš uspjeh' },
+                'about-title': { 'en': 'About Us', 'hr': 'O nama' },
+                'about-text': { 'en': 'We are a family ranch dedicated to providing unforgettable experiences with horses and nature.', 'hr': 'Mi smo obiteljski ranč posvećen pružanju nezaboravnih iskustava s konjima i prirodom.' },
+                'services-title': { 'en': 'Our Services', 'hr': 'Naše usluge' },
+                'service-name-1': { 'en': 'Horseback Riding', 'hr': 'Jahanje' },
+                'service-description-1': { 'en': 'Experience horseback riding in beautiful nature.', 'hr': 'Iskusite jahanje u prekrasnoj prirodi.' },
+                'service-name-2': { 'en': 'Nature Trips', 'hr': 'Izleti u prirodu' },
+                'service-description-2': { 'en': 'Enjoy nature and explore hidden gems.', 'hr': 'Uživajte u prirodi i istražite skrivene ljepote.' },
+                'service-name-3': { 'en': 'Accommodation', 'hr': 'Smještaj' },
+                'service-description-3': { 'en': 'Relax in our cozy accommodation.', 'hr': 'Opustite se u našem udobnom smještaju.' }
+            };
+
+            for (const elementId in elementi) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.innerText = elementi[elementId][jezik];
+                }
+            }
+        }
+
+        document.getElementById("croatian").addEventListener("click", function() { promijeniJezik('hr'); });
+        document.getElementById("english").addEventListener("click", function() { promijeniJezik('en'); });
+    </script>
+
+</body>
+</html> 
