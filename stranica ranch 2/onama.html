@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nama - Ranch Curek</title>
+    <link rel="stylesheet" href="css/onama.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Dodajemo osnovne stilove za hamburger meni */
+        .hamburger-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 30px;
+            color: #333;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu li {
+            margin: 0 10px;
+        }
+
+        .menu.active {
+            display: block;
+        }
+
+        /* Meni za mobilne uređaje */
+        @media (max-width: 768px) {
+            .hamburger-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                width: 100%;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .menu li {
+                margin: 15px 0;
+            }
+
+            .menu.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Zaglavlje -->
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="Logo/logo 2.png" alt="logo">
+            </a>
+        </div>
+
+        <!-- Hamburger ikona -->
+        <div class="hamburger-icon" id="hamburger-icon">
+            &#9776; <!-- Simbol hamburger menija -->
+        </div>
+
+        <nav class="nav">
+            <ul class="menu" id="menu">
+                <li><a href="index.html" class="home-link" id="home-link">Početna</a></li>
+                <li><a href="onama.html" class="about-link active" id="about-link">O nama</a></li>
+                <li><a href="ponuda.html" class="services-link" id="services-link">Ponuda</a></li>
+                <li><a href="kontakt.html" class="contact-link" id="contact-link">Kontakt</a></li>
+                <li><a href="galerija.html" class="gallery-link" id="gallery-link">Galerija</a></li>
+            </ul>
+        </nav>
+
+        <div class="language-switcher">
+            <img src="flags/croatia_round_icon_64.png" alt="Hrvatski" class="language-icon" id="croatian">
+            <img src="flags/united_kingdom_round_icon_64.png" alt="Engleski" class="language-icon" id="english">
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/explore/locations/1342552665785724/ranch-curek/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/p/Ranch-CUREK-100066415277167/?locale=hr_HR" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs sekcija -->
+    <section class="breadcrumbs" id="breadcrumbs">
+        <p><a href="index.html">Početna</a> > O nama</p>
+    </section>
+
+    <!-- Hero sekcija -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" id="hero-title">O nama</h1>
+            <p class="hero-text" id="hero-text">Upoznajte našu priču i vrijednosti</p>
+        </div>
+    </section>
+
+    <!-- Glavni sadržaj "O nama" sekcije -->
+    <section class="about">
+        <h2 class="about-title" id="about-title">Dobrodošli na Ranch Curek</h2>
+        <p class="about-text" id="about-text">Ranch Curek je obiteljski posao koji već godinama pruža visokokvalitetne usluge. 
+        Naša strast prema prirodi i predanost prema našim klijentima čine nas jedinstvenima. 
+        Naša misija je stvaranje okruženja koje potiče povjerenje, zajedništvo i inovacije.</p>
+        <p class="about-text">kuća za odmor, najam prostora za druženje, dječji rođendani,
+            napuhanci, quad najam</p>
+
+        <!-- Dodavanje slike ili galerije -->
+        <div class="about-image">
+            <img src="images/o_nama.jpg" alt="O nama" width="600" height="400">
+        </div>
+    </section>
+
+    <!-- Lokacija sekcija (opcionalno) -->
+    <section class="location" id="location-section">
+        <h2 class="location-title" id="location-title">Posjetite nas</h2>
+        <p class="location-text" id="location-text">Nalazimo se u Pleškovcu, u srcu prirode. Kontaktirajte nas za više informacija.</p>
+        <div class="map-container">
+            <img src="images/lokacija.png" alt="Mapa Ranch Curek" width="600" height="400">
+        </div>
+    </section>
+
+    <!-- Podnožje -->
+    <footer class="footer">
+        <div class="contact-info">
+            <h2>Ranch Curek</h2>
+            <p>Pleškovec 115d</p>
+            <p>40000, Čakovec</p>
+            <p>Email: <a href="mailto:zabavniparkcurek@gmail.com">ranchcurek1@gmail.com</a></p>
+            <p>Kontakt: 092 110 1767</p>
+        </div>
+        <p>&copy; 2025 Ranch Curek</p>
+    </footer>
+
+    <script src="js/onama.js"></script>
+    <script>
+        // Funkcija za prebacivanje jezika
+        function promijeniJezik(jezik) {
+            const elementi = {
+                'home-link': {
+                    'en': 'Home',
+                    'hr': 'Početna'
+                },
+                'about-link': {
+                    'en': 'About Us',
+                    'hr': 'O nama'
+                },
+                'hero-title': {
+                    'en': 'About Us',
+                    'hr': 'O nama'
+                },
+                'hero-text': {
+                    'en': 'Get to know our story and values',
+                    'hr': 'Upoznajte našu priču i vrijednosti'
+                },
+                'about-title': {
+                    'en': 'Welcome to Ranch Curek',
+                    'hr': 'Dobrodošli u Ranch Curek'
+                },
+                'about-text': {
+                    'en': 'Ranch Curek is a family-run business providing top-quality services. Our passion for nature and commitment to our clients make us unique.',
+                    'hr': 'Ranch Curek je obiteljski posao koji već godinama pruža visokokvalitetne usluge. Naša strast prema prirodi i predanost prema našim klijentima čine nas jedinstvenima.'
+                },
+                'location-title': {
+                    'en': 'Visit Us',
+                    'hr': 'Posjetite nas'
+                },
+                'location-text': {
+                    'en': 'We are located in Pleškovec, in the heart of nature. Contact us for more information.',
+                    'hr': 'Nalazimo se u Pleškovcu, u srcu prirode. Kontaktirajte nas za više informacija.'
+                }
+            };
+
+            for (const elementId in elementi) {
+                const element = document.getElementById(elementId);
+                if (element && elementi[elementId][jezik]) {
+                    element.innerText = elementi[elementId][jezik];
+                }
+            }
+        }
+
+        document.getElementById("croatian").addEventListener("click", function() {
+            promijeniJezik('hr');
+        });
+
+        document.getElementById("english").addEventListener("click", function() {
+            promijeniJezik('en');
+        });
+
+        // Funkcija za hamburger meni
+        function toggleHamburgerMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+
+        // Dodavanje event listener-a na klik hamburger ikone
+        document.getElementById("hamburger-icon").addEventListener("click", toggleHamburgerMenu);
+    </script>
+</body>
+</html>
