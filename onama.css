@@ -15,7 +15,7 @@ body {
 
 /* Hero sekcija s pozadinskom slikom */
 .hero {
-  background: url('images/.jpg') no-repeat center center/cover;
+  background: url('images/kuća.jpg') no-repeat center center/cover;
   color: white;
   padding: 100px 150px;
   text-align: center;
@@ -34,7 +34,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 8rem; /* Povećana veličina naslova */
+  font-size: 6rem; /* Povećana veličina naslova */
   margin-bottom: 20px;
   color: #ffd700; /* Zlatna boja za naslov */
   position: relative;
@@ -55,9 +55,16 @@ body {
   height: 120px;
 }
 
+.nav {
+  display: flex;
+  justify-content: center; /* Centriranje navigacije */
+  flex-grow: 1; /* Omogućava da navigacija zauzme sav prostor */
+}
+
 .nav ul {
   list-style: none;
   display: flex;
+  justify-content: center; /* Centriranje stavki unutar liste */
 }
 
 .nav ul li {
@@ -80,7 +87,7 @@ body {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 3px;
+  height: 4px;
   background-color: #7FFF00;
   transition: width 0.4s ease;
 }
@@ -95,7 +102,7 @@ body {
 
 .nav ul li a.active {
   color: #7FFF00;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: bold;
 }
 
@@ -267,8 +274,10 @@ body {
   }
 
   .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centriranje navigacije */
     width: 100%;
-    text-align: center;
   }
 
   .nav ul {
@@ -306,7 +315,7 @@ body {
 
   .hero {
     text-align: center;
-    padding: 30px 0;
+    padding: 15px 0;
   }
 
   .hero-title {
@@ -371,3 +380,31 @@ body {
     gap: 30px;
   }
 }
+
+/* Osnovno ograničavanje širine za cijeli body */
+body {
+  overflow-x: hidden; /* Onemogućava horizontalno pomicanje */
+}
+
+/* Osiguraj da stranica ne izlazi iz ekrana */
+* {
+  max-width: 100%;
+  overflow-x: hidden; /* Ovdje se osigurava da svi elementi na stranici ne izlaze izvan ekrana */
+}
+
+/* Ako imaš posebne elemente koji mogu uzrokovati pomicanje, kao što su slike ili dugmadi, koristi ovo */
+img, video, iframe {
+  max-width: 100%; /* Ovdje garantiramo da slike i drugi mediji ne izlaze izvan svojih spremnika */
+  height: auto;
+}
+
+/* Skrivanje horizontalnog pomicanja na manjim ekranima */
+@media (max-width: 768px) {
+  body {
+      overflow-x: hidden;
+  }
+  .container, .header, .gallery, .slideshow-container, .modal {
+      width: 100%;
+      overflow-x: hidden; /* Osiguraj da svi glavni kontejneri ne mogu uzrokovati horizontalno pomicanje */
+  }
+} 
